@@ -31,9 +31,9 @@ public class FlightStatusTest extends DriverClassSpiceJet{
 	  Fs.checkflightstatusmethod();
 	  Thread.sleep(3000);
   }
-//  @AfterTest
-//  public void aftermethod() throws InterruptedException {
-//	  Thread.sleep(3000);
-//	  driver.close();
-//  }
+ @AfterTest
+ public void aftermethod() throws InterruptedException {
+	  Thread.sleep(3000);
+	  driver.close();
+ }
 }
