@@ -23,13 +23,13 @@ public void onTestSuccess(ITestResult result) {
 	//log the status 
 	extentTest.log(Status.PASS, "Test Passed");
 	String testName=result.getName();
-//try {
-//		
-//		String screenshotpath= takeScreenshot(testName, driver);
-//		extentTest.addScreenCaptureFromPath(screenshotpath);
-//			} catch (IOException e) {
-//		e.printStackTrace();
-//	}
+try {
+		
+		String screenshotpath= takeScreenshot(testName, driver);
+		extentTest.addScreenCaptureFromPath(screenshotpath);
+			} catch (IOException e) {
+		e.printStackTrace();
+	}
 }
 //Invoked each time a test fails.
 @Override
@@ -45,13 +45,13 @@ public void onTestFailure(ITestResult result) {
 		e.printStackTrace();
 	}
 	
-//	try {
-//		
-//		String screenshotpath= takeScreenshot(testName, driver);
-//		extentTest.addScreenCaptureFromPath(screenshotpath);
-//			} catch (IOException e) {
-//		e.printStackTrace();
-//	}
+	try {
+		
+		String screenshotpath= takeScreenshot(testName, driver);
+		extentTest.addScreenCaptureFromPath(screenshotpath);
+			} catch (IOException e) {
+		e.printStackTrace();
+	}
 }
 public void onFinish(ITestContext context) {
 	
