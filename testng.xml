@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+<listener class-name="SpicetJetListeners.SpicetJetListeners"></listener>
+</listeners>
+  
+ <test name="Test1">
+    <classes>
+    <class name="Com.Test.TestMethods.SignUpSpiceJetTest"/>
+    </classes>
+</test> <!-- Test -->
+     
+ <test name="Test2">
+     <classes>
+      <class name="Com.Test.TestMethods.LoginSpiceJetTest"/>
+      </classes>
+</test>
+    
+ <test name="Test3">
+ <classes>
+      <class name="Com.Test.TestMethods.LoginInvalidCredential"/>
+      </classes>
+ </test>
+     
+    <test name="Test4">
+    <classes>
+      <class name="Com.Test.TestMethods.OneWayTripSpiceJetTest"/>
+      </classes>
+    </test>  
+      
+   <test name="Test 5">
+   <classes>
+      <class name="Com.Test.TestMethods.RoundWayTripTest"/>
+      </classes></test>   
+      
+     <test name="Test 6">
+     <classes>
+      <class name="Com.Test.TestMethods.FlightCheckInTest"/>
+      </classes>
+     </test> 
+      
+     <test name="Test 7">
+     <classes>
+      <class name="Com.Test.TestMethods.FlightStatusTest"/>
+      </classes>
+     </test>
+      
+      <test name="Test 8">
+      <classes>
+       <class name="Com.Test.TestMethods.ManageBookingTest"/>
+    </classes>
+      </test>
+      
+    
+  
+</suite> <!-- Suite -->

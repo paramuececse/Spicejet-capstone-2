@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-27T12:12:49 IST" name="Suite" finished-at="2023-08-27T12:16:02 IST" duration-ms="193269">
+    <groups>
+    </groups>
+    <test started-at="2023-08-27T12:12:49 IST" name="Test1" finished-at="2023-08-27T12:13:15 IST" duration-ms="25889">
+      <class name="Com.Test.TestMethods.SignUpSpiceJetTest">
+        <test-method is-config="true" signature="AccessDriverClass()[pri:0, instance:Com.Test.TestMethods.SignUpSpiceJetTest@10289886]" started-at="2023-08-27T12:12:49 IST" name="AccessDriverClass" finished-at="2023-08-27T12:13:01 IST" duration-ms="11894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessDriverClass -->
+        <test-method signature="SpiceJetSignUpMethodPositivemethod(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Com.Test.TestMethods.SignUpSpiceJetTest@10289886]" started-at="2023-08-27T12:13:02 IST" name="SpiceJetSignUpMethodPositivemethod" data-provider="signuppage" finished-at="2023-08-27T12:13:15 IST" duration-ms="12560" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[parameshwari]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[p]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[25/01/1999]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[8072538019]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[paraproject2022@gmail.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Paraproject@99]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Paraproject@99]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SpiceJetSignUpMethodPositivemethod -->
+      </class> <!-- Com.Test.TestMethods.SignUpSpiceJetTest -->
+    </test> <!-- Test1 -->
+    <test started-at="2023-08-27T12:13:15 IST" name="Test2" finished-at="2023-08-27T12:13:31 IST" duration-ms="16233">
+      <class name="Com.Test.TestMethods.LoginSpiceJetTest">
+        <test-method is-config="true" signature="AccessDriverClass()[pri:0, instance:Com.Test.TestMethods.LoginSpiceJetTest@47c81abf]" started-at="2023-08-27T12:13:15 IST" name="AccessDriverClass" finished-at="2023-08-27T12:13:26 IST" duration-ms="10811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessDriverClass -->
+        <test-method signature="SpiceJetLoginMethod(java.lang.String,java.lang.String)[pri:0, instance:Com.Test.TestMethods.LoginSpiceJetTest@47c81abf]" started-at="2023-08-27T12:13:26 IST" name="SpiceJetLoginMethod" data-provider="LoginPage" finished-at="2023-08-27T12:13:31 IST" duration-ms="5266" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[paraproject2022@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Paraproject@99]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SpiceJetLoginMethod -->
+      </class> <!-- Com.Test.TestMethods.LoginSpiceJetTest -->
+    </test> <!-- Test2 -->
+    <test started-at="2023-08-27T12:13:31 IST" name="Test3" finished-at="2023-08-27T12:13:46 IST" duration-ms="14252">
+      <class name="Com.Test.TestMethods.LoginInvalidCredential">
+        <test-method is-config="true" signature="AccessDriverClass()[pri:0, instance:Com.Test.TestMethods.LoginInvalidCredential@18ece7f4]" started-at="2023-08-27T12:13:31 IST" name="AccessDriverClass" finished-at="2023-08-27T12:13:41 IST" duration-ms="9522" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessDriverClass -->
+        <test-method signature="SpiceJetLoginInvalid(java.lang.String,java.lang.String)[pri:0, instance:Com.Test.TestMethods.LoginInvalidCredential@18ece7f4]" started-at="2023-08-27T12:13:41 IST" name="SpiceJetLoginInvalid" data-provider="LoginPageInvaild" finished-at="2023-08-27T12:13:46 IST" duration-ms="4613" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sivasankari@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[siva@99]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SpiceJetLoginInvalid -->
+      </class> <!-- Com.Test.TestMethods.LoginInvalidCredential -->
+    </test> <!-- Test3 -->
+    <test started-at="2023-08-27T12:13:46 IST" name="Test4" finished-at="2023-08-27T12:14:05 IST" duration-ms="19034">
+      <class name="Com.Test.TestMethods.OneWayTripSpiceJetTest">
+        <test-method is-config="true" signature="AccessDriverClass()[pri:0, instance:Com.Test.TestMethods.OneWayTripSpiceJetTest@3576ddc2]" started-at="2023-08-27T12:13:46 IST" name="AccessDriverClass" finished-at="2023-08-27T12:13:57 IST" duration-ms="11023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessDriverClass -->
+        <test-method signature="OneWayTripSpiceJetMethod(java.lang.String,java.lang.String)[pri:0, instance:Com.Test.TestMethods.OneWayTripSpiceJetTest@3576ddc2]" started-at="2023-08-27T12:13:57 IST" name="OneWayTripSpiceJetMethod" data-provider="onewaytrip" finished-at="2023-08-27T12:14:05 IST" duration-ms="7885" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Bangalore]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Coimbatore]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OneWayTripSpiceJetMethod -->
+      </class> <!-- Com.Test.TestMethods.OneWayTripSpiceJetTest -->
+    </test> <!-- Test4 -->
+    <test started-at="2023-08-27T12:14:05 IST" name="Test 5" finished-at="2023-08-27T12:15:10 IST" duration-ms="65420">
+      <class name="Com.Test.TestMethods.RoundWayTripTest">
+        <test-method is-config="true" signature="AccessDriverClass()[pri:0, instance:Com.Test.TestMethods.RoundWayTripTest@1169afe1]" started-at="2023-08-27T12:14:05 IST" name="AccessDriverClass" finished-at="2023-08-27T12:14:17 IST" duration-ms="12081" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessDriverClass -->
+        <test-method signature="RWTSJMethod(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Com.Test.TestMethods.RoundWayTripTest@1169afe1]" started-at="2023-08-27T12:14:17 IST" name="RWTSJMethod" data-provider="Roundwaytrip" finished-at="2023-08-27T12:15:10 IST" duration-ms="53196" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Delhi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Chennai]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Parameshwari]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[p]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8.019538019E9]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[paraproject2022@gmail.com]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Perambalur]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Parameshwari]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[p]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[8.019538019E9]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[9876 1234 4567 234]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[parameshwari]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[5.0]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[2024.0]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[213.0]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RWTSJMethod -->
+      </class> <!-- Com.Test.TestMethods.RoundWayTripTest -->
+    </test> <!-- Test 5 -->
+    <test started-at="2023-08-27T12:15:10 IST" name="Test 6" finished-at="2023-08-27T12:15:24 IST" duration-ms="13427">
+      <class name="Com.Test.TestMethods.FlightCheckInTest">
+        <test-method is-config="true" signature="AccessDriverClass()[pri:0, instance:Com.Test.TestMethods.FlightCheckInTest@1ebea008]" started-at="2023-08-27T12:15:10 IST" name="AccessDriverClass" finished-at="2023-08-27T12:15:19 IST" duration-ms="9208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessDriverClass -->
+        <test-method signature="f()[pri:0, instance:Com.Test.TestMethods.FlightCheckInTest@1ebea008]" started-at="2023-08-27T12:15:19 IST" name="f" finished-at="2023-08-27T12:15:24 IST" duration-ms="4209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- Com.Test.TestMethods.FlightCheckInTest -->
+    </test> <!-- Test 6 -->
+    <test started-at="2023-08-27T12:15:24 IST" name="Test 7" finished-at="2023-08-27T12:15:42 IST" duration-ms="17845">
+      <class name="Com.Test.TestMethods.FlightStatusTest">
+        <test-method is-config="true" signature="AccessDriverClass()[pri:0, instance:Com.Test.TestMethods.FlightStatusTest@7905a0b8]" started-at="2023-08-27T12:15:24 IST" name="AccessDriverClass" finished-at="2023-08-27T12:15:35 IST" duration-ms="11155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessDriverClass -->
+        <test-method signature="flightstatusMethod()[pri:0, instance:Com.Test.TestMethods.FlightStatusTest@7905a0b8]" started-at="2023-08-27T12:15:35 IST" name="flightstatusMethod" finished-at="2023-08-27T12:15:42 IST" duration-ms="6690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flightstatusMethod -->
+      </class> <!-- Com.Test.TestMethods.FlightStatusTest -->
+    </test> <!-- Test 7 -->
+    <test started-at="2023-08-27T12:15:42 IST" name="Test 8" finished-at="2023-08-27T12:16:02 IST" duration-ms="20416">
+      <class name="Com.Test.TestMethods.ManageBookingTest">
+        <test-method is-config="true" signature="AccessDriverClass()[pri:0, instance:Com.Test.TestMethods.ManageBookingTest@2462cb01]" started-at="2023-08-27T12:15:42 IST" name="AccessDriverClass" finished-at="2023-08-27T12:15:56 IST" duration-ms="14188" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessDriverClass -->
+        <test-method signature="BookingMethod()[pri:0, instance:Com.Test.TestMethods.ManageBookingTest@2462cb01]" started-at="2023-08-27T12:15:56 IST" name="BookingMethod" finished-at="2023-08-27T12:16:02 IST" duration-ms="6226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BookingMethod -->
+      </class> <!-- Com.Test.TestMethods.ManageBookingTest -->
+    </test> <!-- Test 8 -->
+  </suite> <!-- Suite -->
+</testng-results>
