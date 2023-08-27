@@ -60,8 +60,8 @@ public Object[][] getLoginData() throws IOException{
 //	  LoginSpiceJetobjects1.logout();
   }
 
-//@AfterTest
-//public void LoginPageClose() {
-//	driver.quit();
-//}
+@AfterTest
+public void LoginPageClose() {
+	driver.quit();
+}
   }
