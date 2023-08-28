@@ -1,5 +1,6 @@
 package Com.Objects;
 
+import java.io.IOException;
 import java.time.Duration;
 import org.openqa.selenium.JavascriptExecutor;	
 import org.openqa.selenium.WebDriver;
@@ -9,7 +10,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-public class RoundTripWaySpiceJetTripDemo {
+
+import SpicetJetListeners.SpicetJetListeners;
+public class RoundTripWaySpiceJetTripDemo extends SpicetJetListeners{
 	
 		public WebDriver driver;
 		public RoundTripWaySpiceJetTripDemo(WebDriver driver) {
@@ -252,13 +255,14 @@ public void PIFirstNameMethod(String FName) {
  }
 	 
  
- public void SecureCode(String s) {
+ public void SecureCode(String s) throws IOException {
 	 driver.switchTo().frame(iframe5);
 	 WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.elementToBeClickable(securecode));
 		securecode.click();
-		securecode.sendKeys(s); ;
+		securecode.sendKeys(s); 
 	 driver.switchTo().defaultContent();
+	 extentTest.addScreenCaptureFromPath(takeScreenshot("RoundTrip", driver));
 	
  }
 }
