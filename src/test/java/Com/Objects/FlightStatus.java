@@ -8,7 +8,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeTest;
 
-public class FlightStatus {
+import SpicetJetListeners.SpicetJetListeners;
+
+public class FlightStatus extends SpicetJetListeners{
 	public WebDriver driver;
 	public FlightStatus(WebDriver driver) {
 		this.driver=driver;
@@ -45,9 +47,10 @@ public class FlightStatus {
     public void sg(String s) {
     	sg.sendKeys(s);
     }
-    public void checkflightstatusmethod() {
+    public void checkflightstatusmethod() throws IOException {
     String checkflightstatus1=	checkflightstatus.getText();
     System.out.println("Flight status checking :"+checkflightstatus1);
+    extentTest.addScreenCaptureFromPath(takeScreenshot("FlightStatus", driver));
     }
     public void se() {
     	se.click();
