@@ -1,5 +1,6 @@
 package Com.Objects;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -9,7 +10,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class FlightCheckInPage {
+import Com.SpiceJet.DriverClass.DriverClassSpiceJet;
+import SpicetJetListeners.SpicetJetListeners;
+
+public class FlightCheckInPage extends SpicetJetListeners{
 	public WebDriver driver;
 	public FlightCheckInPage(WebDriver driver) {
 		this.driver=driver;
@@ -87,14 +91,17 @@ public void LoginKey() {
 	    	String s= LoginConfirm.getText();
 	    	System.out.println("Login confirmation :"+s);
 	}
-	     public void checkin() {
+	     public void checkin() throws IOException {
+	    	 
 	    	 CheckIn.click();
 	     }
 	     public void TicketNumber(String tnumber) {
 	    	 tickectnumber.sendKeys(tnumber); 
 	     }
-	     public void emailid(String temailid) {
+	     public void emailid(String temailid) throws IOException {
 	    	 emailid.sendKeys(temailid);
+	    	 extentTest.addScreenCaptureFromPath(takeScreenshot("FlightCheckIn", driver));
+	    	 //takeScreenshot("flightcheckin", driver);
 	     }
 	     public void Tsearch() {
 	    	 WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
