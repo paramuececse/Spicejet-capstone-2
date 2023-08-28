@@ -2,6 +2,7 @@ package Com.Test.TestMethods;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -19,7 +20,7 @@ public class FlightCheckInTest extends DriverClassSpiceJet {
 		
 	}
   @Test
-  public void f() throws InterruptedException {
+  public void f() throws InterruptedException, IOException {
 	  Fcp=new FlightCheckInPage(driver);
 //	  Fcp.LoginKey();
 //	  Thread.sleep(1000);
@@ -32,14 +33,19 @@ public class FlightCheckInTest extends DriverClassSpiceJet {
 	  Fcp.checkin();
 	  Fcp.TicketNumber("96785443");
 	  Fcp.emailid("paraproject2022@gmail.com");
+	  
 	  Fcp.flightcheckin();
 	 // Fcp.Tsearch();
 	  Thread.sleep(3000);
 	  
   }
- @AfterTest
- public void aftermethod() throws InterruptedException {
+
+ 
+
+  @AfterMethod
+  public void aftermethod() throws InterruptedException {
 	  Thread.sleep(3000);
 	  driver.close();
- }
+  }
+
 }
