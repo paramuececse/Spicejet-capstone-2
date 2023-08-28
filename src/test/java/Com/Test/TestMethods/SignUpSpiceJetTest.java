@@ -10,6 +10,7 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -53,7 +54,7 @@ public Object[][] getLoginData() throws IOException{
 	}
 	
 @Test(dataProvider = "signuppage")
-  public void SpiceJetSignUpMethodPositivemethod(String username,String lastname,String dob,String number,String email,String password,String confirmpassword) throws InterruptedException {
+  public void SpiceJetSignUpMethodPositivemethod(String username,String lastname,String dob,String number,String email,String password,String confirmpassword) throws InterruptedException, IOException {
 	  SignUpSpiceJetobjects = new SignUpSpiceDemo(driver);
 	  SignUpSpiceJetobjects.SignUpmethod();
 	  SwitchWindow();
@@ -80,8 +81,8 @@ public Object[][] getLoginData() throws IOException{
 	  
   }
 
-//@AfterTest
-//public void SignUpPageClose() {
-//	driver.quit();
-//}
+@AfterMethod
+public void SignUpPageClose() {
+	driver.quit();
+}
 }
