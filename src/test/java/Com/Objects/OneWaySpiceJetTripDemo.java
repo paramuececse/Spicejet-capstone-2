@@ -1,4 +1,6 @@
 package Com.Objects;
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -6,7 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.interactions.Actions;
 import Com.SpiceJet.DriverClass.DriverClassSpiceJet;
-public class OneWaySpiceJetTripDemo extends DriverClassSpiceJet{
+import SpicetJetListeners.SpicetJetListeners;
+public class OneWaySpiceJetTripDemo extends SpicetJetListeners{
 public WebDriver driver;
 public OneWaySpiceJetTripDemo (WebDriver driver) {
 	this.driver=driver;
@@ -55,7 +58,8 @@ public void OwDepartureDate() throws InterruptedException {
 	//OneWayDepaturedate.click();
 	
 }
-public void OwSearchFlightClick() {
+public void OwSearchFlightClick() throws IOException {
+	extentTest.addScreenCaptureFromPath(takeScreenshot("onewaytrip", driver));
 	SearchFlight.click();
 }
 }
