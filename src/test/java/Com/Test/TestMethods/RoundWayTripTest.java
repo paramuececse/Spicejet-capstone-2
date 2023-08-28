@@ -8,6 +8,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -49,7 +50,7 @@ public class RoundWayTripTest extends DriverClassSpiceJet{
 	
   @Test(dataProvider = "Roundwaytrip")
   public void RWTSJMethod(String From,String To,String firstname,String lastname,String moblienumber,String email,String city,
-		  String pifirstname,String pilastname,String pimobilenumber,String cardnumber,String cardname,String month,String year,String securecode) throws InterruptedException {
+		  String pifirstname,String pilastname,String pimobilenumber,String cardnumber,String cardname,String month,String year,String securecode) throws InterruptedException, IOException {
 	  RWSJObject=new  RoundTripWaySpiceJetTripDemo(driver);
 	  RWSJObject.RwTripCircleSelectMethod();
 	  RWSJObject.RwBoardingFromMethod(From);
@@ -88,9 +89,9 @@ public class RoundWayTripTest extends DriverClassSpiceJet{
 	  Thread.sleep(3000);
   }
   
-//  @AfterTest
-//  public void aftermethod() throws InterruptedException {
-//	  Thread.sleep(3000);
-//	  driver.close();
-//  }
+  @AfterMethod
+  public void aftermethod() throws InterruptedException {
+	  Thread.sleep(3000);
+	  driver.close();
+  }
 }
