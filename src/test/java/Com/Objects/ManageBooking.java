@@ -1,11 +1,15 @@
 package Com.Objects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ManageBooking {
+import SpicetJetListeners.SpicetJetListeners;
+
+public class ManageBooking extends SpicetJetListeners{
 	
 	public WebDriver driver;
 	public ManageBooking(WebDriver driver) {
@@ -36,9 +40,10 @@ public class ManageBooking {
 	public void emailid(String s1) {
 		emailid.sendKeys(s1);
 	}
-	public void checkmanagebooking() {
+	public void checkmanagebooking() throws IOException {
 		String checkmanagebook=checkmanagebooking.getText();
 		System.out.println("check manage booking status :"+checkmanagebook);
+		extentTest.addScreenCaptureFromPath(takeScreenshot("ManageBooking", driver));
 	}
 	public void searchbooking() {
 		searchbooking.click();
