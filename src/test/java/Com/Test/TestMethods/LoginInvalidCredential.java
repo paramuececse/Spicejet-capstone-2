@@ -9,6 +9,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -47,7 +48,7 @@ public Object[][] getLoginData() throws IOException{
     	
 	}
   @Test(dataProvider = "LoginPageInvaild")
-  public void SpiceJetLoginInvalid(String emailidinvalid,String passwordinvalid) throws InterruptedException {
+  public void SpiceJetLoginInvalid(String emailidinvalid,String passwordinvalid) throws InterruptedException, IOException {
 	  LoginSpiceJetobjects1=new LoginSpiceDemo(driver);
 	  LoginSpiceJetobjects1.LoginKey();
 	  Thread.sleep(1000);
@@ -55,13 +56,15 @@ public Object[][] getLoginData() throws IOException{
 	  LoginSpiceJetobjects1.EmilId(emailidinvalid);
 	  LoginSpiceJetobjects1.passwordLogin(passwordinvalid);
 	  Thread.sleep(2000);
-	  LoginSpiceJetobjects1.Loginbutton2();
+	  LoginSpiceJetobjects1.LoginbuttonInvalid();
 //	  Thread.sleep(5000);
 //	  LoginSpiceJetobjects1.logout();
   }
 
-@AfterTest
+
+@AfterMethod
 public void LoginPageClose() {
 	driver.quit();
 }
   }
+
