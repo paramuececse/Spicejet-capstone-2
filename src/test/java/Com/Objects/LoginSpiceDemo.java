@@ -1,11 +1,15 @@
 package Com.Objects;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginSpiceDemo {
+import SpicetJetListeners.SpicetJetListeners;
+
+public class LoginSpiceDemo extends SpicetJetListeners{
 
 
 public WebDriver driver;
@@ -57,13 +61,22 @@ public void passwordLogin(String passwordlogin) {
 //public void InvaildPassword(String invalidpassword) {
 //enterInvalidpassword.sendKeys(invalidpassword);
 //}
-     public void Loginbutton2() {
+public void Loginbuttonvalid() throws IOException {
+	 SpicejetLoginButton.click();
+	String s= LoginConfirm.getText();
+	System.out.println("Login confirmation :"+s);
+	extentTest.addScreenCaptureFromPath(takeScreenshot("Loginvalid", driver));
+}
+     public void LoginbuttonInvalid() throws IOException {
     	 SpicejetLoginButton.click();
     	String s= LoginConfirm.getText();
     	System.out.println("Login confirmation :"+s);
+    	extentTest.addScreenCaptureFromPath(takeScreenshot("LoginInvalid", driver));
 }
-     public void logout() {
-    	 logout.click();
-     }
+//     public void logout() throws IOException {
+//    	 logout.click();
+//    	 
+//     }
+     
 }
 
