@@ -11,8 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-//import org.testng.ITestResult;
-//import org.testng.annotations.BeforeTest;
+
 public class DriverClassSpiceJet {
 	public static WebDriver driver;
 	
@@ -20,10 +19,7 @@ public class DriverClassSpiceJet {
 public WebDriver beforeTest(){
 	WebDriverManager.chromedriver().setup();
 	 driver = new ChromeDriver();
-//		  System.setProperty("Webdriver-http-factory", "jdk-http-client");
-//			//create instance of chrome driver
-//			driver=new ChromeDriver();
-//			//implicity managing
+		 
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 			//invoke that spicejet url
 			driver.get("https://www.spicejet.com/");
