@@ -9,6 +9,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -47,7 +48,7 @@ public class OneWayTripSpiceJetTest extends DriverClassSpiceJet{
 	    	
 		}
   @Test(dataProvider = "onewaytrip")
-  public void OneWayTripSpiceJetMethod(String From,String To) throws InterruptedException {
+  public void OneWayTripSpiceJetMethod(String From,String To) throws InterruptedException, IOException {
 	  OWSJObject=new  OneWaySpiceJetTripDemo(driver);
 	  OWSJObject.OwTripCircleSelectMethod();
 	  OWSJObject.OwBoardingFromMethod(From);
@@ -57,8 +58,8 @@ public class OneWayTripSpiceJetTest extends DriverClassSpiceJet{
 	  OWSJObject.OwSearchFlightClick();
 	 
   }
-//  @AfterTest
-//  public void LoginPageClose() {
-//  	driver.quit();
-//  }
+  @AfterMethod
+  public void LoginPageClose() {
+  	driver.quit();
+  }
 }
