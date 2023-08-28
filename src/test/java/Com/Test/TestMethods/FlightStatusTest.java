@@ -2,6 +2,7 @@ package Com.Test.TestMethods;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -20,7 +21,7 @@ public class FlightStatusTest extends DriverClassSpiceJet{
 	
 	
   @Test
-  public void flightstatusMethod() throws InterruptedException {
+  public void flightstatusMethod() throws InterruptedException, IOException {
 	  Fs=new FlightStatus(driver);
 	  Fs.flightstatus();
 	  Fs.SelectOrigin("DEl");
@@ -31,9 +32,11 @@ public class FlightStatusTest extends DriverClassSpiceJet{
 	  Fs.checkflightstatusmethod();
 	  Thread.sleep(3000);
   }
- @AfterTest
- public void aftermethod() throws InterruptedException {
+
+  @AfterMethod
+  public void aftermethod() throws InterruptedException {
 	  Thread.sleep(3000);
 	  driver.close();
- }
+  }
+
 }
