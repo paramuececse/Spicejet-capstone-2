@@ -1,13 +1,18 @@
 package Com.Objects;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+
+import SpicetJetListeners.SpicetJetListeners;
+
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class SignUpSpiceDemo {
+public class SignUpSpiceDemo extends SpicetJetListeners{
 	private WebDriver driver;
 
 	public SignUpSpiceDemo(WebDriver driver) {
@@ -93,8 +98,9 @@ public class SignUpSpiceDemo {
 	public void password(String send_password) {
 		EnterNewPassword.sendKeys(send_password);
 	}
-	public void confirmpassword(String conf_password) {
+	public void confirmpassword(String conf_password) throws IOException {
 		EnterConfirmPassword.sendKeys(conf_password);
+		extentTest.addScreenCaptureFromPath(takeScreenshot("Signuppage", driver));
 	}
 //	public void SignUpCheckBoxClick() {
 //		SignUpCheckBoxClick.click();
