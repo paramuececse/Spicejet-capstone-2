@@ -2,6 +2,7 @@ package Com.Test.TestMethods;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -18,7 +19,7 @@ public class ManageBookingTest extends DriverClassSpiceJet{
 	}
 	
   @Test
-  public void BookingMethod() throws InterruptedException {
+  public void BookingMethod() throws InterruptedException, IOException {
 	  mb=new ManageBooking(driver);
 	  mb.mbmethod();
 	  mb.pnrnumber("98356342");
@@ -27,9 +28,9 @@ public class ManageBookingTest extends DriverClassSpiceJet{
 	  mb.checkmanagebooking();
 	  Thread.sleep(3000);
   }
-//  @AfterTest
-//  public void aftermethod() throws InterruptedException {
-//	  Thread.sleep(3000);
-//	  driver.close();
-//  }
+  @AfterMethod
+  public void aftermethod() throws InterruptedException {
+	  Thread.sleep(3000);
+	  driver.close();
+  }
 }
